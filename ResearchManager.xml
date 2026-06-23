@@ -1,0 +1,49 @@
+<GuiXml>
+    <Controls>
+        <TopLevelControl name="ResearchManagerWindow" mouseEnabled="true" movable="true" hidden="true" clampedToScreen="true" resizeHandleSize="16">
+            <Dimensions x="1320" y="680"/>
+            <Anchor point="CENTER"/>
+            <OnMoveStop>ResearchManager.UI:OnWindowMoved()</OnMoveStop>
+            <OnResizeStop>ResearchManager.UI:OnWindowResized()</OnResizeStop>
+
+            <Controls>
+                <Backdrop name="$(parent)BG" inherits="ZO_DefaultBackdrop"/>
+
+                <Label name="$(parent)Title" font="ZoFontWinH1" color="66FFFFFF" text="Research Manager">
+                    <Anchor point="TOPLEFT" offsetX="20" offsetY="18"/>
+                </Label>
+
+                <Button name="$(parent)Close" inherits="ZO_CloseButton">
+                    <Anchor point="TOPRIGHT" offsetX="-12" offsetY="12"/>
+                    <OnClicked>ResearchManager.UI:HideWindow()</OnClicked>
+                </Button>
+
+                <Button name="$(parent)Refresh" inherits="ZO_DefaultButton" text="Refresh">
+                    <Dimensions x="100" y="28"/>
+                    <Anchor point="TOPRIGHT" relativeTo="$(parent)Close" relativePoint="TOPLEFT" offsetX="-10" offsetY="4"/>
+                    <OnClicked>ResearchManager.UI:RefreshWindow()</OnClicked>
+                </Button>
+
+                <Control name="$(parent)StatsScroll" inherits="ZO_ScrollContainer">
+                    <Anchor point="TOPLEFT" offsetX="16" offsetY="56"/>
+                    <Dimensions x="320" y="600"/>
+                </Control>
+
+                <Control name="$(parent)LeftScroll" inherits="ZO_ScrollContainer">
+                    <Anchor point="TOPLEFT" relativeTo="$(parent)StatsScroll" relativePoint="TOPRIGHT" offsetX="8" offsetY="0"/>
+                    <Dimensions x="320" y="600"/>
+                </Control>
+
+                <Control name="$(parent)MiddleScroll" inherits="ZO_ScrollContainer">
+                    <Anchor point="TOPLEFT" relativeTo="$(parent)LeftScroll" relativePoint="TOPRIGHT" offsetX="8" offsetY="0"/>
+                    <Dimensions x="320" y="600"/>
+                </Control>
+
+                <Control name="$(parent)RightScroll" inherits="ZO_ScrollContainer">
+                    <Anchor point="TOPLEFT" relativeTo="$(parent)MiddleScroll" relativePoint="TOPRIGHT" offsetX="8" offsetY="0"/>
+                    <Dimensions x="350" y="600"/>
+                </Control>
+            </Controls>
+        </TopLevelControl>
+    </Controls>
+</GuiXml>

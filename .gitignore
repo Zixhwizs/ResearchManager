@@ -1,0 +1,17 @@
+# Editor / OS
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# ESO local state (these should never live in the repo)
+*.bak
+*.bak-*
+SavedVariables/
+Errors/
+
+# Build / packaging artefacts (none today but reserve)
+dist/
+*.zip

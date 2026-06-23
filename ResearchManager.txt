@@ -1,0 +1,22 @@
+## Title: Research Manager
+## Author: zixhwizs
+## Version: 0.2.0
+## AddOnVersion: 000200
+## APIVersion: 101049 101050
+## Description: Tracks crafting research across all characters and recommends what to research next for maximum efficiency.
+## SavedVariables: ResearchManager_SavedVars
+## DependsOn: LibAddonMenu-2.0>=41 LibAddonMenuOrderListBox>=012 LibCustomMenu>=730 LibDialog>=127 LibFeedback LibFilters-3.0>=350 LibMainMenu-2.0>=40400 LibShifterBox>=000700 LibLazyCrafting>=23 FCOItemSaver>=283
+## OptionalDependsOn: LibDebugLogger
+
+Constants.lua
+Localization/en.lua
+Localization/$(language).lua
+Scanner.lua
+Aggregate.lua
+Optimizer.lua
+Crafter.lua
+ResearchManager.xml
+UI.lua
+Settings.lua
+ResearchManager.lua
+bindings.xml
