@@ -36,12 +36,36 @@ screen lists any that are missing; install those and reload.
 
 ---
 
-## Installing
+### Downloading from GitHub (no Minion required)
 
-1. Download the addon and unzip it.
-2. Copy the **`ResearchManager`** folder into your ESO AddOns directory:
+The addon lives at [github.com/zixhwizs/ResearchManager](https://github.com/zixhwizs/ResearchManager).
+You can install it by hand without the Minion addon manager:
+
+1. Open [github.com/zixhwizs/ResearchManager](https://github.com/zixhwizs/ResearchManager)
+   in your browser.
+2. Click the green **`< > Code`** button, then **Download ZIP**. (Direct link:
+   [ResearchManager-main.zip](https://github.com/zixhwizs/ResearchManager/archive/refs/heads/main.zip).)
+3. **Unzip** the download. GitHub wraps everything in a folder named
+   `ResearchManager-main` (the branch name is appended) — that outer folder is the
+   repository, **not** the addon itself. Open it and you'll find the actual addon
+   folder, plain **`ResearchManager`**, inside.
+
+> GitHub does not bundle the required libraries — they are separate downloads.
+> Grab each one from the [dependency list above](#what-you-need-installed) (the
+> in-game AddOns screen will also flag any that are still missing).
+
+### Putting it in place
+
+1. Copy the inner **`ResearchManager`** folder (the one with `ResearchManager.txt`
+   inside it — **not** the `ResearchManager-main` wrapper) into your ESO AddOns
+   directory:
    - **Live:** `Documents/Elder Scrolls Online/live/AddOns/`
    - **PTS:** `Documents/Elder Scrolls Online/pts/AddOns/`
+   You should end up with `…/AddOns/ResearchManager/ResearchManager.txt`. If you
+   see `…/AddOns/ResearchManager-main/ResearchManager/…`, you copied one level too
+   high — move the inner folder up.
+2. Do the same for each required library folder so it sits directly under
+   `AddOns/`.
 3. Launch the game, open **AddOns** from the main menu, and make sure
    **Research Manager** (and every required library above) is enabled.
 4. Reload the UI: type `/reloadui` in chat, or restart the game.
